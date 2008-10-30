@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Domain Plug-in
+Bundle-SymbolicName: net.jmage.tip.todo.domain
+Export-Package: net.jmage.tip.todo.domain, net.jmage.tip.todo.domain.internal
+Bundle-Version: 1.0.0
+Bundle-Vendor: jmage.net
+Require-Bundle: org.eclipse.core.runtime, javax.xml 
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
