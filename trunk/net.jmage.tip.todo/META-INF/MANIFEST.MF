@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Todo Manager Plug-in
+Bundle-SymbolicName: net.jmage.tip.todo; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: jmage.net
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ net.jmage.tip.todo.domain;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
