@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+	<extension id="application" point="org.eclipse.core.runtime.applications">
+		<application>
+			<run class="net.jmage.tip.todo.Application">
+			</run>
+		</application>
+	</extension>
+	<extension point="org.eclipse.ui.perspectives">
+		<perspective name="RCP Perspective" class="net.jmage.tip.todo.Perspective"
+			id="net.jmage.tip.todo.perspective">
+		</perspective>
+	</extension>
+	<extension point="org.eclipse.ui.views">
+		<view class="net.jmage.tip.todo.TodoListView" id="net.jmage.tip.todo.view.todolist"
+			name="Todo List" restorable="true">
+		</view>
+	</extension>
+	<extension point="org.eclipse.core.runtime.adapters">
+		<factory adaptableType="net.jmage.tip.todo.domain.TodoItem"
+			class="net.jmage.tip.todo.TodoAdapterFactory">
+			<adapter type="org.eclipse.ui.model.IWorkbenchAdapter">
+			</adapter>
+		</factory>
+	</extension>
+	<extension point="org.eclipse.ui.popupMenus">
+		<objectContribution adaptable="false"
+			id="net.jmage.tip.todo.contextMenu" objectClass="net.jmage.tip.todo.domain.TodoItem">
+			<action class="net.jmage.tip.todo.actions.AddChildAction" id="net.jmage.tip.todo.contextMenu.addChild"
+				label="Add Child">
+			</action>
+			<action class="net.jmage.tip.todo.actions.AddSiblingAction"
+				id="net.jmage.tip.todo.contextMenu.addSibling" label="Add Sibling">
+			</action>
+			<action class="net.jmage.tip.todo.actions.RemoveItemAction"
+				id="net.jmage.tip.todo.contextMenu.removeItem" label="Remove Item">
+			</action>
+			<action class="net.jmage.tip.todo.actions.RenameItemAction"
+				id="net.jmage.tip.todo.contextMenu.renameChild" label="Rename">
+			</action>
+		</objectContribution>
+	</extension>
+	<extension point="org.eclipse.ui.actionSets">
+		<actionSet id="net.jmage.tip.browser.TodoActionSet" label="TodoActionSet">
+			<action class="net.jmage.tip.todo.actions.RemoveItemAction"
+				enablesFor="1" id="net.jmage.tip.todo.actions.removeItem-menu"
+				label="Remove Item" menubarPath="menu.edit/additions" 
+				style="toggle">
+			</action>
+			<action class="net.jmage.tip.todo.actions.AddChildAction"
+				enablesFor="1" id="net.jmage.tip.todo.actions.addChild-menu" label="Add Item"
+				menubarPath="menu.edit/additions"  style="toggle">
+			</action>
+			<action class="net.jmage.tip.todo.actions.AddSiblingAction"
+				enablesFor="1" id="net.jmage.tip.todo.actions.addSibling-menu"
+				label="Add Sibling" menubarPath="menu.edit/additions" 
+				style="toggle">
+			</action>
+			<action class="net.jmage.tip.todo.actions.RenameItemAction"
+				enablesFor="1" id="net.jmage.tip.todo.actions.renameItem-menu"
+				label="Rename Item" menubarPath="menu.edit/additions"
+				style="toggle">
+			</action>
+
+		</actionSet>
+	</extension>
+
+</plugin>
