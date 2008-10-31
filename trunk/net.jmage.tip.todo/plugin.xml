@@ -43,25 +43,32 @@
 		</objectContribution>
 	</extension>
 	<extension point="org.eclipse.ui.actionSets">
-		<actionSet id="net.jmage.tip.browser.TodoActionSet" label="TodoActionSet">
-			<action class="net.jmage.tip.todo.actions.RemoveItemAction"
-				enablesFor="1" id="net.jmage.tip.todo.actions.removeItem-menu"
-				label="Remove Item" menubarPath="menu.edit/additions" 
-				style="toggle">
+		<actionSet
+        id="net.jmage.tip.browser.TodoActionSet"
+        label="TodoActionSet"
+        visible="true">
+			<action
+         class="net.jmage.tip.todo.actions.RemoveItemAction"
+         enablesFor="1"
+         id="net.jmage.tip.todo.actions.removeItem-menu"
+         label="Remove Item"
+         menubarPath="menu.edit/additions"
+         pulldown="true"
+         style="push">
 			</action>
 			<action class="net.jmage.tip.todo.actions.AddChildAction"
-				enablesFor="1" id="net.jmage.tip.todo.actions.addChild-menu" label="Add Item"
-				menubarPath="menu.edit/additions"  style="toggle">
+				enablesFor="1" id="net.jmage.tip.todo.actions.addItem-menu" label="Add Item"
+				menubarPath="menu.edit/additions"  style="push">
 			</action>
 			<action class="net.jmage.tip.todo.actions.AddSiblingAction"
 				enablesFor="1" id="net.jmage.tip.todo.actions.addSibling-menu"
 				label="Add Sibling" menubarPath="menu.edit/additions" 
-				style="toggle">
+				style="push">
 			</action>
 			<action class="net.jmage.tip.todo.actions.RenameItemAction"
 				enablesFor="1" id="net.jmage.tip.todo.actions.renameItem-menu"
 				label="Rename Item" menubarPath="menu.edit/additions"
-				style="toggle">
+				style="push">
 			</action>
 
 		</actionSet>

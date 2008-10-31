@@ -5,10 +5,13 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.IWorkbenchWindowActionDelegate;
 
 import net.jmage.tip.todo.domain.TodoItem;
 
-public abstract class NodeActionAdapter implements IObjectActionDelegate {
+public abstract class NodeActionAdapter implements IObjectActionDelegate,
+		IWorkbenchWindowActionDelegate {
 	private TodoItem item;
 
 	public abstract void run(TodoItem item);
@@ -29,5 +32,16 @@ public abstract class NodeActionAdapter implements IObjectActionDelegate {
 			return;
 		item = (TodoItem) ((IStructuredSelection) selection).getFirstElement();
 		action.setEnabled(item != null);
+	}
+
+	@Override
+	public void dispose() {
+		item = null;
+	}
+
+	@Override
+	public void init(IWorkbenchWindow window) {
+		// TODO Auto-generated method stub
+		
 	}
 }
