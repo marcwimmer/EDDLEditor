@@ -50,25 +50,43 @@
 			<action
          class="net.jmage.tip.todo.actions.RemoveItemAction"
          enablesFor="1"
+         icon="icons/remove-item.png"
          id="net.jmage.tip.todo.actions.removeItem-menu"
          label="Remove Item"
          menubarPath="menu.edit/additions"
          pulldown="true"
-         style="push">
+         style="push"
+         toolbarPath="additions">
 			</action>
-			<action class="net.jmage.tip.todo.actions.AddChildAction"
-				enablesFor="1" id="net.jmage.tip.todo.actions.addItem-menu" label="Add Item"
-				menubarPath="menu.edit/additions"  style="push">
+			<action
+         class="net.jmage.tip.todo.actions.AddChildAction"
+         enablesFor="1"
+         icon="icons/add-child.png"
+         id="net.jmage.tip.todo.actions.addItem-menu"
+         label="Add Item"
+         menubarPath="menu.edit/additions"
+         style="push"
+         toolbarPath="additions">
 			</action>
-			<action class="net.jmage.tip.todo.actions.AddSiblingAction"
-				enablesFor="1" id="net.jmage.tip.todo.actions.addSibling-menu"
-				label="Add Sibling" menubarPath="menu.edit/additions" 
-				style="push">
+			<action
+         class="net.jmage.tip.todo.actions.AddSiblingAction"
+         enablesFor="1"
+         icon="icons/add-sibling.png"
+         id="net.jmage.tip.todo.actions.addSibling-menu"
+         label="Add Sibling"
+         menubarPath="menu.edit/additions"
+         style="push"
+         toolbarPath="additions">
 			</action>
-			<action class="net.jmage.tip.todo.actions.RenameItemAction"
-				enablesFor="1" id="net.jmage.tip.todo.actions.renameItem-menu"
-				label="Rename Item" menubarPath="menu.edit/additions"
-				style="push">
+			<action
+         class="net.jmage.tip.todo.actions.RenameItemAction"
+         enablesFor="1"
+         icon="icons/rename-item.png"
+         id="net.jmage.tip.todo.actions.renameItem-menu"
+         label="Rename Item"
+         menubarPath="menu.edit/additions"
+         style="push"
+         toolbarPath="additions">
 			</action>
 
 		</actionSet>
