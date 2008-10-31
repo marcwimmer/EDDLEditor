@@ -8,4 +8,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui,
  net.jmage.tip.todo.domain;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
 
